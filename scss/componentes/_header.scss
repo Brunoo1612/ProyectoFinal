@@ -1,0 +1,43 @@
+@import "base/colores";
+@import "base/listas";
+@import "base/variables";
+@import "base/extends";
+@import "base/mixins";
+
+header {
+    @include relleno(nth($colores, 2), 20px);
+    border: 2px solid nth($colores, 1);
+
+    .logo {
+        width: 100px;
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    .menu {
+        display: flex;
+        justify-content: space-around;
+        @extend %listas;
+        border: 10px;
+
+        li {
+            @include relleno(nth($colores, 1), 0.5rem);
+            border-radius: 1rem;
+
+            &:hover {
+                transform: scale(1.5);
+                transition: all 1s;
+            }
+
+            a {
+                text-decoration: none;
+                color: nth($colores, 2);
+                font-size: 25px;
+
+                &:active {
+                    color: blueviolet;
+                }
+            }
+        }
+    }
+}

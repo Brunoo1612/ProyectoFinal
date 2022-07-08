@@ -1,0 +1,48 @@
+@import "base/colores";
+@import "base/listas";
+@import "base/variables";
+
+.encabezado {
+    display: flex;
+    justify-content: space-around;
+    padding: 60px 10px;
+
+    .imágen {
+        width: 40%;
+    }
+
+    h1 {
+        @include letras(nth($encabezados, 1), nth($colores, 1));
+    }
+
+    @media screen and (min-width: 600px) {
+        section img {
+            display: block;
+        }
+     }
+}
+
+h2 {
+    @include letras(nth($encabezados, 2), nth($colores, 1));
+    text-align: center;
+}
+
+p {
+    @include letras(20px, nth($colores, 1))
+}
+
+.videos {
+    display: flex;
+    justify-content: space-around;
+
+    iframe {
+        width: 40%;
+    }
+}
+
+.mapas {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px;
+}
+

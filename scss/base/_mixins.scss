@@ -1,0 +1,9 @@
+@mixin relleno($color, $padding) {
+    background-color: $color;
+    padding: $padding;
+}
+
+@mixin letras($tamanio, $color) {
+    font-size: $tamanio;
+    color: $color;
+}
